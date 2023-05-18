@@ -10,10 +10,19 @@
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
+    "chart.js": "^4.3.0",
+    "echarts": "^5.4.2",
+    "echarts-for-react": "^3.0.2",
+    "faker": "^6.6.6",
+    "moment": "^2.29.4",
     "next": "13.4.2",
     "postcss": "8.4.23",
     "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
+    "stocksocket": "^2.1.2",
     "tailwindcss": "3.3.2"
   }
 }
