@@ -28,6 +28,9 @@ import Stock2Img from "../images/stock2.png";
 import Stock3Img from "../images/stock3.png";
 import GirlImg from "../images/girl.png";
 import stockVdo from "../images/stockVideo.png";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 ChartJS.register(
   CategoryScale,
@@ -74,6 +77,16 @@ const index = () => {
   const socket = useRef();
   const [labels, setLabels] = useState([]);
   const [values, setValues] = useState([]);
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+  };
 
   const data = {
     labels,
@@ -155,14 +168,14 @@ const index = () => {
       </div>
 
       <div>
-        <div className="flex justify-center items-center flex-col gap-8 py-8 px-16">
-          <div className="text-gray-900 text-2xl font-semibold my-4">
+        <div className=" justify-center items-center flex-col gap-8 py-8 px-16">
+          <div className="text-gray-900 text-2xl font-semibold  text-center my-8 mb-16 ">
             Invest in their stock and be part of the business
           </div>
-          <div className="flex justify-between items-center gap-4">
+          <Slider className="slick-slider" {...settings}>
             {compImages.map((comp) => {
               return (
-                <div className=" h-6 w-40">
+                <div className=" h-6 w-40 slick-slide cursor-pointer">
                   <Image
                     src={comp}
                     height={22}
@@ -172,7 +185,7 @@ const index = () => {
                 </div>
               );
             })}
-          </div>
+          </Slider>
         </div>
       </div>
       <div className="py-16 px-32 flex flex-col gap-4">
@@ -187,12 +200,12 @@ const index = () => {
 
         <div className="grid grid-cols-3 gap-8">
           <div className="col-span-1">
-            <div className=" bg-orange-100 p-4">
+            <div className=" bg-orange-100 p-8">
               <Image
                 src={Stock1Img}
                 height={200}
                 width={300}
-                className="h-[200px] w-[300px] object-cover"
+                className="h-[200px] w-[300px] object-cover rounded-xl"
               />
             </div>
             <div className="text-gray-900 font-semibold text-lg my-4">
@@ -206,12 +219,12 @@ const index = () => {
           </div>
 
           <div className="col-span-1">
-            <div className=" bg-orange-100 p-4">
+            <div className=" bg-orange-100 p-8">
               <Image
                 src={Stock2Img}
                 height={200}
                 width={300}
-                className="h-[200px] w-[300px] object-cover border"
+                className="h-[200px] w-[300px] object-cover border rounded-xl "
               />
             </div>
             <div className="text-gray-900 font-semibold text-lg my-4">
@@ -225,13 +238,12 @@ const index = () => {
           </div>
 
           <div className="col-span-1">
-            <div className=" bg-orange-100 p-4">
+            <div className=" bg-orange-100 p-8">
               <Image
                 src={Stock3Img}
                 height={200}
                 width={300}
-                className="h-[200px] w-[300px] object-cover"
-                s
+                className="h-[200px] w-[300px] object-cover rounded-xl"
               />
             </div>
             <div className="text-gray-900 font-semibold text-lg my-4">
@@ -321,7 +333,7 @@ const index = () => {
               your email
             </div>
           </div>
-          <div className="col-span-1 flex flex-col gap-4">
+          <form autoComplete="off" className="col-span-1 flex flex-col gap-4">
             <div className="text-xl font-semibold text-orange-600 mb-4">
               SignUp For Newsletter
             </div>
@@ -342,7 +354,7 @@ const index = () => {
             <button className="py-3 mt-4 px-4 bg-orange-600 text-white flex justify-center font-medium rounded-lg">
               Get started
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>

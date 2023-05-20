@@ -19,8 +19,8 @@ function Navbar() {
         </div>
         <div className="flex items-center gap-12">
           <div className="font-medium text-orange-600">Sign Up</div>
-          <div className="font-medium px-4 py- rounded-md bg-orange-600 text-white">
-            Sign Up
+          <div className="font-medium px-6 py-3 rounded-md bg-orange-600 text-white">
+            Sign In
           </div>
         </div>
       </div>

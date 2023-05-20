@@ -21,6 +21,8 @@
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1",
     "stocksocket": "^2.1.2",
